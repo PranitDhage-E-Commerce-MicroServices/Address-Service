@@ -75,7 +75,6 @@ public class Address {
 
     @Column(name = "user_id")
     @JsonProperty("userId")
-    @NonNull
     private Integer userId;
 
 }
