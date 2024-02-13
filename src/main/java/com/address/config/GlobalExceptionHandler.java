@@ -34,7 +34,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(value = {
             ResourceNotFoundException.class,
-            AuthenticationException.class,
+            com.address.exceptions.AuthenticationException.class,
             java.security.SignatureException.class,
             UnexpectedErrorException.class,
             IOException.class,
@@ -62,7 +62,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
                     ),
                     HttpStatus.OK
             );
-        } else if (e instanceof AuthenticationException) {
+        } else if (e instanceof com.address.exceptions.AuthenticationException) {
             return new ResponseEntity<>(
                     new APIResponseEntity<>(
                             Constants.STATUS_ERROR, e.getMessage(), ((AuthenticationException) e).getCode(), getReqId(request)
