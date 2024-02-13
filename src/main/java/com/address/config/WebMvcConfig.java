@@ -33,7 +33,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(apiRequestInterceptor()).addPathPatterns(
-                "/user/**"
+                "/address/**"
         );
     }
 
@@ -45,7 +45,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/user/**").allowedOrigins("https://localhost:8081", "https://127.0.0.1:8081").allowedMethods("*");
+        registry.addMapping("/address/**").allowedOrigins("ADDRESS-SERVICE").allowedMethods("*");
     }
 
     @Bean
