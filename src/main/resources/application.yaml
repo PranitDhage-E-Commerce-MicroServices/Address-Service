@@ -38,6 +38,12 @@ logging:
     level: "[%-5level] %logger{36}.%M.[%line]"
     dateformat: "yyyy-MM-dd HH:mm:ss"
     correlation: "[%X{reqId}] - "
+  level:
+    org:
+      springframework:
+        cloud.gateway: TRACE
+        http.server.reactive: DEBUG
+        web.reactive: DEBUG
 
 # Sleuth and Zipkin Config
 management:
