@@ -38,3 +38,8 @@ logging:
     level: "[%-5level] %logger{36}.%M.[%line]"
     dateformat: "yyyy-MM-dd HH:mm:ss"
     correlation: "[%X{reqId}] - "
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
