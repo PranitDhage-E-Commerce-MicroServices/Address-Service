@@ -39,6 +39,7 @@ logging:
     dateformat: "yyyy-MM-dd HH:mm:ss"
     correlation: "[%X{reqId}] - "
 
+# Sleuth and Zipkin Config
 management:
   tracing:
     sampling:
